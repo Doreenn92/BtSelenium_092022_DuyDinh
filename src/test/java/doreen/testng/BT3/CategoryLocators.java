@@ -30,5 +30,10 @@ public class CategoryLocators {
     public String saveBtn = "//button[normalize-space()='Save']";
     public String categoriesSearchField = "//input[@id='search']";
     public String categoryResultList = "//tbody/tr/td[2]";
-
+    public String editCategoryBtn = "//tbody/tr[1]//i[@class='las la-edit']";
+    public String category1stResult = "//tbody/tr[1]/td[2]";
+    public String deleteCategoryBtn = "//tbody/tr[1]//i[@class='las la-trash']";
+    public String deleteModalHeader = "//div[@id='delete-modal']//h4";
+    public String deleteBtn = "//a[@id='delete-link']";
+    public String nothingFound = "//tbody/tr[@class='footable-empty']";
 }
