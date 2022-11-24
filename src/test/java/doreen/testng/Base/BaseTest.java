@@ -40,6 +40,10 @@ public class BaseTest {
         driver.findElement(By.xpath(xpath)).click();
     }
 
+    public String getText(String xpath) {
+        return (driver.findElement(By.xpath(xpath)).getText());
+    }
+
     public void sleep(double seconds) {
         try {
             Thread.sleep((long) (seconds * 1000));

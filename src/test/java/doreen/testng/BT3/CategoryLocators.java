@@ -1,11 +1,16 @@
-package doreen.testng.BT1;
+package doreen.testng.BT3;
 
 public class CategoryLocators {
 
+    public String loginDialog ="//div[@class='container']//h1[starts-with(@class,'h3')]";
     public String copyBtn = "//button[normalize-space()='Copy']";
     public String loginBtn = "//button[normalize-space()='Login']";
+
+    public String activeMenu = "//ul[@id='main-menu']/li[@class='aiz-side-nav-item mm-active']//a[@class='aiz-side-nav-link active']/span[@class='aiz-side-nav-text']";
     public String productsMenu = "//div[@class='aiz-side-nav-wrap']//li//span[normalize-space()='Products']";
     public String categoryMenu = "//span[normalize-space()='Products']/ancestor::li//ul//li//span[normalize-space()='Category']";
+    public String pageHeader = "//div[@class='aiz-main-content']//h1";
+    public String cardHeader = "//div[@class='aiz-main-content']//h5";
     public String addCategoryBtn = "//span[normalize-space()='Add New category']";
 
     public String nameCategory = "//input[@id='name']";

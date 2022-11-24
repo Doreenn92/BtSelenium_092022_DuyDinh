@@ -1,4 +1,4 @@
-package doreen.testng.BT1;
+package doreen.testng.BT2;
 
 import doreen.testng.Base.BaseTest;
 import org.openqa.selenium.By;
