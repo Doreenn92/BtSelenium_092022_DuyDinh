@@ -104,10 +104,10 @@ public class AddProduct extends BaseTest {
 
     @Test(priority = 1)
     public void addProduct() throws AWTException {
-        // addCategory();
+        addCategory();
         Actions action = new Actions(driver);
         Robot robot = new Robot();
-        click(locators.productsMenu);
+            //click(locators.productsMenu); //nếu ko có bước addCategory() thì bỏ ghi chú bước này
         click(locators.addNewProductMenu);
         sleep(1);
         assertSoft.assertEquals(getText(locators.cardHeader), "Add New product");
@@ -118,7 +118,7 @@ public class AddProduct extends BaseTest {
         //input category
         click(locators.productCategory);
         action.sendKeys(categoryName).sendKeys(Keys.ENTER).build().perform();
-        //  action.sendKeys(findElementXpath(locators.parentCategorySearch),categoryName).sendKeys(Keys.ENTER).build().perform(); //use Actions
+            //action.sendKeys(findElementXpath(locators.parentCategorySearch),categoryName).sendKeys(Keys.ENTER).build().perform(); //use Actions
         sleep(0.3);
 
         //input unit
@@ -126,7 +126,6 @@ public class AddProduct extends BaseTest {
 
         //input tags
         click(locators.productTags);
-        //action.sendKeys(findElementXpath(locators.productTags), "watch").sendKeys(Keys.ENTER).build().perform();//use Actions
         action.sendKeys(findElementXpath(locators.productTags), "watch").sendKeys(Keys.ENTER).build().perform();//use Actions
 
         //input Colors
@@ -135,9 +134,9 @@ public class AddProduct extends BaseTest {
         action.click(findElementXpath(locators.productColorSearch)).build().perform();
         action.sendKeys(productColor1).sendKeys(Keys.ENTER).build().perform(); //color 1
         action.keyDown(Keys.COMMAND).sendKeys("A").keyUp(Keys.COMMAND).build().perform(); // Ctrl A + Delete
-        /*action.keyDown(Keys.COMMAND).build().perform();
-        robot.keyPress(KeyEvent.VK_A);
-        robot.keyRelease(KeyEvent.VK_A);
+            /*action.keyDown(Keys.COMMAND).build().perform();
+            robot.keyPress(KeyEvent.VK_A);
+            robot.keyRelease(KeyEvent.VK_A);
         action.keyUp(Keys.COMMAND).build().perform();*/
         findElementXpath(locators.productColorSearch).sendKeys(Keys.DELETE);
         action.sendKeys(productColor2).sendKeys(Keys.ENTER).build().perform(); //color 2
