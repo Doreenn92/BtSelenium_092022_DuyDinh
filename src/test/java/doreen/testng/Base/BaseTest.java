@@ -2,11 +2,13 @@ package doreen.testng.Base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import java.time.Duration;
+import java.util.List;
 
 public class BaseTest {
     public WebDriver driver;
@@ -50,5 +52,21 @@ public class BaseTest {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public Boolean checkElementExist(By by) {
+        List<WebElement> listElement = driver.findElements(by);
+
+        if (listElement.size() > 0) {
+            System.out.println("Element existing: " + true);
+            return true;
+        } else {
+            System.out.println("Element existing: " + false);
+            return false;
+        }
+    }
+
+    public WebElement findElementXpath(String xpath){
+        return driver.findElement(By.xpath(xpath));
     }
 }
