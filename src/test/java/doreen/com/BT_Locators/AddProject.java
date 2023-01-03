@@ -1,9 +1,8 @@
 package doreen.com.BT_Locators;
 
-import doreen.com.Base.Base;
-import org.openqa.selenium.WindowType;
+import doreen.com.Base.Base_old;
 
-public class AddProject extends Base {
+public class AddProject extends Base_old {
     public static void main(String[] args) {
         LearningLocators xp = new LearningLocators();
         AddProject addPj = new AddProject();

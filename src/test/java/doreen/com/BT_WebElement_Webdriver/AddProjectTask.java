@@ -2,14 +2,13 @@ package doreen.com.BT_WebElement_Webdriver;
 
 import doreen.com.BT_WebElement_Webdriver.Locators.ProjectLocators;
 import doreen.com.BT_WebElement_Webdriver.Locators.TaskLocators;
-import doreen.com.Base.Base;
+import doreen.com.Base.Base_old;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.WindowType;
 
 import java.util.List;
 
-public class AddProjectTask extends Base {
+public class AddProjectTask extends Base_old {
     public static void main(String[] args) {
         ProjectLocators pj = new ProjectLocators();
         TaskLocators task = new TaskLocators();

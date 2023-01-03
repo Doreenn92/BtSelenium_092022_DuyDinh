@@ -1,9 +1,8 @@
 package doreen.com.BT_Locators2;
 
-import doreen.com.Base.Base;
-import org.openqa.selenium.WindowType;
+import doreen.com.Base.Base_old;
 
-public class AddEmployee extends Base{
+public class AddEmployee extends Base_old {
     public static void main(String[] args) throws InterruptedException {
         EmployeeLocators xp  = new EmployeeLocators();
         AddEmployee addEmp = new AddEmployee();

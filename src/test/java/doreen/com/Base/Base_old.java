@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Base {
+public class Base_old {
     public static WebDriver driver;
 
     public static void setupBrowser() {
